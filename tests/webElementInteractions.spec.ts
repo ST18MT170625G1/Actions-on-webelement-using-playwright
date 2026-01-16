@@ -53,4 +53,16 @@ const filepath = path.join(process.cwd(),'test-data',
 
 await page.locator("//input[@id='singleFileInput']").setInputFiles(filepath)
 
+const screenshotPath = path.join(
+  process.cwd(),
+  'Screenshots',
+  'page.png'
+);
+
+await page.screenshot({
+  path: screenshotPath,
+  fullPage: true
+});
+
+
 })
